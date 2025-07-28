@@ -32,7 +32,7 @@ function PureChatHeader({
   return (
     <header className="flex sticky top-0 bg-background py-1.5 items-center px-2 md:px-2 gap-2">
       <SidebarToggle />
-
+{/* 
       {(!open || windowWidth < 768) && (
         <Tooltip>
           <TooltipTrigger asChild>
@@ -50,22 +50,22 @@ function PureChatHeader({
           </TooltipTrigger>
           <TooltipContent>New Chat</TooltipContent>
         </Tooltip>
-      )}
-
+      )} */}
+{/* 
       {!isReadonly && (
         <ModelSelector
           selectedModelId={selectedModelId}
           className="order-1 md:order-2"
         />
-      )}
+      )} */}
 
-      {!isReadonly && (
+      {/* {!isReadonly && (
         <VisibilitySelector
           chatId={chatId}
           selectedVisibilityType={selectedVisibilityType}
           className="order-1 md:order-3"
         />
-      )}
+      )} */}
 
       {/* <Button
         className="bg-zinc-900 dark:bg-zinc-100 hover:bg-zinc-800 dark:hover:bg-zinc-200 text-zinc-50 dark:text-zinc-900 hidden md:flex py-1.5 px-2 h-fit md:h-[34px] order-4 md:ml-auto"
