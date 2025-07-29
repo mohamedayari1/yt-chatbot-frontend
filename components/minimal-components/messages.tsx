@@ -3,8 +3,8 @@
 import type { ChatMessage } from "@/lib/types";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import MessageBubble from "./message-bubble";
 import Greeting from "./Greeting";
+import MessageBubble, { ThinkingMessage } from "./message-bubble";
 
 interface ConversationProps {
   messages: ChatMessage[];
@@ -51,7 +51,7 @@ export default function Conversation({
         </motion.div>
       ))}
 
-      {isLoading && messages.length > 0 && (
+      {/* {isLoading && messages.length > 0 && (
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,6 +68,10 @@ export default function Conversation({
             </div>
           </div>
         </motion.div>
+      )} */}
+
+      {messages.length > 0 && messages[messages.length - 1].role === "user" && (
+        <ThinkingMessage />
       )}
 
       {/* Invisible element for auto-scroll */}
