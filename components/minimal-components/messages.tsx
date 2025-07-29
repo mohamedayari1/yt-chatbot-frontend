@@ -4,6 +4,7 @@ import type { ChatMessage } from "@/lib/types";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import MessageBubble from "./message-bubble";
+import Greeting from "./Greeting";
 
 interface ConversationProps {
   messages: ChatMessage[];
@@ -13,7 +14,6 @@ interface ConversationProps {
 }
 
 export default function Conversation({
-
   messages = [], // Add default value here
   isLoading = false,
   onEdit,
@@ -34,11 +34,7 @@ export default function Conversation({
       ref={containerRef}
       className={`flex flex-col min-w-0 gap-6 flex-1 overflow-y-auto pt-4 relative ${className}`}
     >
-      {messages.length === 0 && (
-        <div className="flex items-center justify-center h-full text-muted-foreground">
-          <p>No messages yet. Start a conversation!</p>
-        </div>
-      )}
+      {messages.length === 0 && <Greeting />}
 
       {messages.map((message, index) => (
         <motion.div
