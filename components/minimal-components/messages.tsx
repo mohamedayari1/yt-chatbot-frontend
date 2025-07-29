@@ -13,6 +13,7 @@ interface ConversationProps {
 }
 
 export default function Conversation({
+
   messages = [], // Add default value here
   isLoading = false,
   onEdit,

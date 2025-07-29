@@ -12,7 +12,7 @@ function generateUUID(): string {
 }
 
 const Page = () => {
-  const id = generateUUID();
+  // const id = generateUUID();
 
   return (
     //   <Chat
@@ -25,7 +25,7 @@ const Page = () => {
     //   // session={session}
     //   autoResume={false}
     // />
-    <Chat onMessages={DEMO_MESSAGES} />
+    <Chat messages={DEMO_MESSAGES} />
 
   );
 };
