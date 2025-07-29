@@ -1,5 +1,7 @@
 // import { Chat } from "@/components/chat";
 import { Chat } from "@/components/minimal-components/chat";
+import { DEMO_MESSAGES } from "./hardcodedConversation";
+
 
 function generateUUID(): string {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
@@ -23,7 +25,7 @@ const Page = () => {
     //   // session={session}
     //   autoResume={false}
     // />
-    <Chat />
+    <Chat messages={DEMO_MESSAGES} />
 
   );
 };
