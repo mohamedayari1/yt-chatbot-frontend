@@ -25,7 +25,7 @@ const Page = () => {
     //   // session={session}
     //   autoResume={false}
     // />
-    <Chat messages={DEMO_MESSAGES} />
+    <Chat onMessages={DEMO_MESSAGES} />
 
   );
 };
