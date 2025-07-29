@@ -40,20 +40,20 @@ export function Chat() {
   }
 
   // Mock API function
-  function mockApi(input: string): Promise<string> {
+  const mockApi = (input: string): Promise<string> => {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve("This is a mock response to: " + input);
       }, 1000);
     });
-  }
+  };
 
   return (
-    <main>
+    <div className="flex flex-col min-w-0 h-dvh bg-background">
       <Conversation messages={messages} isLoading={isLoading} />
       <div className="flex mx-auto px-4 bg-background pb-4 md:pb-6 gap-2 w-full md:max-w-3xl">
         <ChatInput onSend={sendMessageHandler} />
       </div>
-    </main>
+    </div>
   );
 }
