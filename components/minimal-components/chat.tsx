@@ -3,6 +3,7 @@
 import { DEMO_MESSAGES } from "@/app/(chat)/hardcodedConversation";
 import { ChatMessage } from "@/lib/types";
 import { useState } from "react";
+import ChatHeader from "./chat-header";
 import ChatInput from "./input";
 import Conversation from "./messages";
 
@@ -50,6 +51,7 @@ export function Chat() {
 
   return (
     <div className="flex flex-col min-w-0 h-dvh bg-background">
+      <ChatHeader />
       <Conversation messages={messages} isLoading={isLoading} />
       <div className="flex mx-auto px-4 bg-background pb-4 md:pb-6 gap-2 w-full md:max-w-3xl">
         <ChatInput onSend={sendMessageHandler} messages={messages} />
